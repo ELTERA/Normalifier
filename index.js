@@ -42,8 +42,7 @@ const BLOCKME = [
 module.exports = function Normalifier(mod) {
 	
 	let enabled = true,
-		log = false,
-		niceName = mod.proxyAuthor !== 'caali' ? '[Norm] ' : ''
+		log = false
 	
 	mod.hook('S_ABNORMALITY_BEGIN', 4, event => {
 		if(mod.game.me.is(event.target) && log) console.log('[Norm] Abnormality: ' + event.id + ' Duration: ' + event.duration + ' Stacks: ' + event.stacks)
